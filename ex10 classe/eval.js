@@ -42,6 +42,9 @@ console.log(user);
     randomUser.style.color = 'white';
     randomUser.style.height = '30px';
     randomUser.style.width = '100px';
+    randomUser.addEventListener('click', () =>{
+        contactApi();
+    })
    
 
 
