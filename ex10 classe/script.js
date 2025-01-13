@@ -36,23 +36,24 @@
 // exampleUser3.getProfileInfo();
 
 class Imc {
-    //* Constructor -> initialise les données
+        //* Constructor -> initialise les données
     constructor(nom, poids, taille) {
         // TODO
     this.nameUser = nom;
     this.weightUser = poids;
     this.heightUser = taille;
+    this.imc = this.calculImc();
     }
     //* Le calcul
     calculImc() {
         // TODO
-    if (poids == )
-        return this.weightUser/(this.heightUser * this.heightUser);
+        return (this.weightUser/this.heightUser **2) .toFixed(2);
     }
     //* Affichage
     display() {
-        // TODO
+        console.log(`Bonjour, ${this.nameUser}, (${this.weightUser} kg, ${this.heightUser} M) a un IMC de : ${this.imc}`);
     }
+        // TODO
 }
 //* progr principal -> on fait l'injection des données
 let list = [
@@ -63,4 +64,4 @@ let list = [
     new Imc("Colonel Clock ", 200, 1.75),
     new Imc("JOsiane de la Vega", 99, 1.55)
 ];
-list.???((uneInstanceImc) => uneInstanceImc.display());
+list.forEach((uneInstanceImc) => uneInstanceImc.display());
