@@ -1,6 +1,5 @@
 const api = document.querySelector('.apiRandom');
 
-
 const contactApi = async () =>{
     const reponse = await fetch ('https://randomuser.me/api/');
     console.log(reponse);
@@ -9,6 +8,7 @@ const contactApi = async () =>{
 
     const dataTransformed = await reponse.json();
     console.log(dataTransformed);
+    console.log(dataTransformed[0]);
 
 const user = dataTransformed.results;
 console.log(user);
@@ -42,12 +42,11 @@ console.log(user);
     randomUser.style.color = 'white';
     randomUser.style.height = '30px';
     randomUser.style.width = '100px';
+
     randomUser.addEventListener('click', () =>{
         contactApi();
     })
    
-
-
         api.append(container);
         container.append(photo)
         container.append(nom);   
