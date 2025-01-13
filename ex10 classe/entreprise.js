@@ -35,11 +35,22 @@ class Pme {
 
     bilanCalculed() {
       //TODO
-      console.log(`Ma petite entreprise - : Cout Initial : ${this._eCoutsFixes + this._eAchats}`)
-      console.log(`Ma petite entreprise - : Cout Total Equipe :`)
-      console.log(`Ma petite entreprise - : Ventes ${this._eVentes}`)
-      console.log(`Ma petite entreprise - : BILAN : `)
-    
+      console.log(this._eEquipe);
+      let cumulEquipe =0;
+      this._bilan = 0;
+      console.log(` ${this._eNom} : Cout Initial : ${this._eCoutsFixes + this._eAchats} `)
+
+      for(let unSalarie of this._eEquipe){
+        cumulEquipe += unSalarie.getCout();
+      }
+      console.log(` ${this._nom} : Cout total equipe : ${cumulEquipe}`);
+
+      this._cout += cumulEquipe;
+      console.log(` ${this._nom} : Ventes ${this._eVentes}`);
+
+      this._bilan = this._eVentes - this._eCoutsFixes - this._eAchats;
+      console.log(` ${this._nom} : BILAN : ${this._bilan}`);
+      
     }
 }
 const pme = new Pme(
