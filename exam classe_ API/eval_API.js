@@ -36,7 +36,7 @@ button.addEventListener('click', async function(){
     const tempMax = data.fcst_day_0.tmax;
     const tempMin = data.fcst_day_0.tmin;
 
-    if (info) info.textContent = ''/*Si info est vide, alors affiche les infos*/
+    
     info.append(`Aujourd'hui le temps est ${condition}, `);
     info.append(`et la température est de ${temperature}°C`);
     info.append(`T° Max = ${tempMax} -`);
