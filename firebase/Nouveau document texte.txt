@@ -1,0 +1,17 @@
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyBqnTacdvtEUnYb71yG0Q4Uen5YLOoNO9o",
+
+    authDomain: "soupe-de-poulet.firebaseapp.com",
+
+    projectId: "soupe-de-poulet",
+
+    storageBucket: "soupe-de-poulet.firebasestorage.app",
+
+    messagingSenderId: "413479521448",
+
+    appId: "1:413479521448:web:ef736f8387c22d989e869d",
+
+    measurementId: "G-BRYEY3252M"
+
+  };
